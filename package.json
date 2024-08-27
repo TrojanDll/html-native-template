@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "gulp",
+    "prod": "gulp prod"
+  },
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
