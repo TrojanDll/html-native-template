@@ -10,6 +10,7 @@ import sourceMaps from "gulp-sourcemaps";
 import plumber from "gulp-plumber";
 import notify from "gulp-notify";
 import csso from "gulp-csso";
+import autoprefixer from "gulp-autoprefixer";
 
 const plumberNotify = (title) => {
   return {
@@ -32,6 +33,7 @@ gulp.task("sass", function () {
   return gulp
     .src("./src/sass/*.scss")
     .pipe(plumber(plumberNotify("SCSS")))
+    .pipe(autoprefixer())
     .pipe(sourceMaps.init())
     .pipe(sassGlob())
     .pipe(sass())
